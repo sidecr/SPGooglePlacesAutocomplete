@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Stephen Poletto. All rights reserved.
 //
 
-#define kGoogleAPIKey @"YOUR_API_KEY"
+#define kGoogleAPIKey @"AIzaSyCSa4csHmm2y3DcGFLnuvCSsDhnddgr4fU"
 #define kGoogleAPINSErrorCode 42
 
 @class CLPlacemark;
@@ -23,7 +23,7 @@ typedef void (^SPGooglePlacesPlaceDetailResultBlock)(NSDictionary *placeDictiona
 extern SPGooglePlacesAutocompletePlaceType SPPlaceTypeFromDictionary(NSDictionary *placeDictionary);
 extern NSString *SPBooleanStringForBool(BOOL boolean);
 extern NSString *SPPlaceTypeStringForPlaceType(SPGooglePlacesAutocompletePlaceType type);
-extern BOOL SPEnsureGoogleAPIKey();
+extern BOOL SPEnsureGoogleAPIKey(NSString *key);
 extern void SPPresentAlertViewWithErrorAndTitle(NSError *error, NSString *title);
 extern BOOL SPIsEmptyString(NSString *string);
 
