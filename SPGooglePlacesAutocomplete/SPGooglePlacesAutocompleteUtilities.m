@@ -28,11 +28,11 @@ NSString *SPPlaceTypeStringForPlaceType(SPGooglePlacesAutocompletePlaceType type
 
 BOOL SPEnsureGoogleAPIKey(NSString *key) {
     BOOL userHasProvidedAPIKey = YES;
-    if ([kGoogleAPIKey isEqualToString:key]) {
+    /*if ([kGoogleAPIKey isEqualToString:key]) {
         userHasProvidedAPIKey = NO;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"API Key Needed" message:@"Please replace kGoogleAPIKey with your Google API key." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alert show];
-    }
+    }*/
     return userHasProvidedAPIKey;
 }
 
