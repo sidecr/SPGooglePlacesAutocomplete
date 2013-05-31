@@ -15,7 +15,7 @@
 
 @implementation SPGooglePlacesAutocompleteQuery
 
-@synthesize input, sensor, key, offset, location, radius, language, types, resultBlock;
+@synthesize input, sensor, key, offset, location, radius, language, types, resultBlock, country;
 
 + (SPGooglePlacesAutocompleteQuery *)query {
     return [[self alloc] init];
@@ -31,6 +31,7 @@
         self.location = CLLocationCoordinate2DMake(-1, -1);
         self.radius = NSNotFound;
         self.types = -1;
+        self.country = @"us";
     }
     return self;
 }
@@ -57,6 +58,9 @@
     }
     if (types != -1) {
         [url appendFormat:@"&types=%@", SPPlaceTypeStringForPlaceType(types)];
+    }
+    if (country) {
+        [url appendFormat:@"&components=country:%@", country];
     }
     return url;
 }

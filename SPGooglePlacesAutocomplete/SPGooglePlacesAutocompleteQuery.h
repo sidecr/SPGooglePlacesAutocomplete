@@ -42,6 +42,7 @@
  */
 @property (nonatomic, strong) NSString *key;
 
+@property (nonatomic, strong) NSString *country;
 #pragma mark -
 #pragma mark Optional parameters
 
