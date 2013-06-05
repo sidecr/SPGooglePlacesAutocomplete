@@ -53,7 +53,7 @@
                 if (error) {
                     block(nil, nil, error);
                 } else {
-                    CLPlacemark *placemark = [placemarks onlyObject];
+                    CLPlacemark *placemark = [placemarks count] > 0 ? [placemarks objectAtIndex:0] : nil;
                     block(placemark, self.name, error);
                 }
             }];
@@ -66,7 +66,7 @@
         if (error) {
             block(nil, nil, error);
         } else {
-            CLPlacemark *placemark = [placemarks onlyObject];
+            CLPlacemark *placemark = [placemarks count] > 0 ? [placemarks objectAtIndex:0] : nil;
             block(placemark, self.name, error);
         }
     }];
